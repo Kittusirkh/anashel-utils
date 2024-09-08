@@ -6,7 +6,6 @@ import generate_image
 import generate_prompt
 import generate_style
 import merge_lora
-import merge_lora_checkpoint  # Add this import
 
 def main():
     # Invoke boot routine
@@ -33,7 +32,7 @@ def dispatch_utility(settings):
     elif utility == "Merge LoRA":
         merge_lora.start(settings)
     elif utility == "Merge LoRA Checkpoint":  # Add this new condition
-        merge_lora_checkpoint.start(settings)
+        input.start(settings)
     else:
         print(f"Unknown utility: {utility}")
 
